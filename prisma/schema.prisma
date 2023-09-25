@@ -7,8 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model user {
-  id       Int    @id @default(autoincrement())
-  username String @unique
-  password String
+model Girlfriend {
+  id      Int    @id @default(autoincrement())
+  name    String
+  hp      Int    @default(100)
+  attack  Int    @default(50)
+  defense Int    @default(50)
+  speed   Int    @default(50)
+  stamina Int    @default(50)
 }
